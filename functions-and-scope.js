@@ -2,7 +2,7 @@
 // maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
 // Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+let grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 /* Opdracht  1: Cum Laude */
 
@@ -18,19 +18,50 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 
 // 1. maak een variabele cumLaude om bij te houden hoeveel studenten cum laude zijn afgestudeerd
-let cumLaude =  0;
+// let cumLaude =  0;
 
 // 2. voor elk cijfer van 8 of hoger tel ik 1 op bij de variabele cum laude
 
-for ( let i = 0; i <= grades.length ; i++){
-    console.log(i);
-}
+// for ( let i = 0; i < grades.length +1 ; i++){
+//     if (grades[i] >= 8){
+//         cumLaude ++
+//     }
+//     else {
+//     }
+// }
 
+//3. Laat het aantal behaalde cum laude afgestudeerde studenten weergeven.
+// console.log(cumLaude)
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+const studentsCumLaude = 0
+
+function cumLaude(grades){
+
+    let studentsCumLaude = 0
+
+    for ( let i = 0; i < grades.length +1 ; i++){
+        if (grades[i] >= 8){
+           studentsCumLaude ++
+        }
+        else {
+        }
+    }
+    return studentsCumLaude
+}
+
+console.log(cumLaude(grades));
+grades = [6,4,5];
+
+console.log(cumLaude(grades));
+
+grades = [8, 9, 4, 6, 10];
+console.log(cumLaude(grades));
+
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
